@@ -1,0 +1,20 @@
+ '''
+Author: Lee yeun woo
+Date: 2024-12-12
+'''
+from tkinter import *
+
+def count_up():
+    num = int(label.cget("text"))
+    label.config(text=f"{num+1}")
+
+app = Tk()
+app.title("계수기 예제")
+app.geometry("500x300")
+
+label = Label(app, text="0",font="Arial 20")
+label.pack(pady=10)
+
+button = Button(app, text="클릭하세요", font="Arial 20",command=count_up)
+button.pack(pady=20)
+app.mainloop()
